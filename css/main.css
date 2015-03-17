@@ -111,9 +111,9 @@ a {
 
 .main-header {
   font-size: 24px;
-  margin-bottom: 17px; }
-  .main-header.before-straight {
-    margin-bottom: 23px; }
+  margin-bottom: 28px; }
+  .main-header.before-text {
+    margin-bottom: 22px; }
 
 .sub-header {
   font-size: 20px;
@@ -178,25 +178,28 @@ body {
     z-index: -2; }
 
 .section {
-  padding: 0 50px; }
-  .section:first-child {
-    padding-top: 50px; }
+  padding: 70px 50px 0; }
 
-.section + .section {
-  padding-top: 50px; }
+.footer {
+  margin-top: 80px;
+  padding-bottom: 30px;
+  padding: 10px 50px 20px; }
+  .footer .email {
+    line-height: 28px; }
 
 .social-media {
-  font-size: 30px;
-  padding-bottom: 30px; }
+  font-size: 30px; }
 
-.artists .artist {
-  margin-bottom: 50px; }
-  .artists .artist .artist-image {
-    height: 200px;
-    width: 200px;
-    margin-right: 30px; }
-  .artists .artist .social-media {
-    margin-top: 30px; }
+.artists.section {
+  padding-top: 54px; }
+.artists .artist .artist-image {
+  height: 200px;
+  width: 200px;
+  margin-right: 30px; }
+.artists .artist .social-media {
+  margin-top: 30px; }
+.artists .artist + .artist {
+  margin-top: 50px; }
 .artists .muffs {
   background-size: 120%;
   background-position: -13px -20px; }
