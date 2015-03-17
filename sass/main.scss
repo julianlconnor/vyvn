@@ -5,6 +5,7 @@
 @import 'base/base';
 @import 'base/icon-font';
 @import 'base/typography';
+@import 'components/gallery';
 
 body {
     background-color: #111;
@@ -75,4 +76,36 @@ body {
 .social-media {
     font-size: 30px;
     padding-bottom: 30px;
+}
+
+.artists {
+
+    .artist {
+        margin-bottom: 50px;
+
+        .artist-image {
+            height: 200px;
+            width: 200px;
+            margin-right: 30px;
+        }
+
+        .social-media {
+            margin-top: 30px;
+        }
+    }
+
+    .muffs {
+      background-size: 120%;
+      background-position: -13px -20px;
+    }
+
+    .mykola {
+        background-position: -140px -91px;
+        background-size: 172%;
+    }
+
+    .ali {
+        background-size: 100%;
+        background-position: 0 -43px;
+    }
 }

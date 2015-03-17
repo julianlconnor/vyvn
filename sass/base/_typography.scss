@@ -1,7 +1,16 @@
 // _typography.scss
 
 .main-header {
-    font-size: 22px;
-    margin-bottom: 18px;
+    font-size: 24px;
+    margin-bottom: 17px;
+
+    &.before-straight {
+        margin-bottom: 23px;
+    }
+}
+
+.sub-header {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
