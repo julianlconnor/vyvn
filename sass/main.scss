@@ -1,5 +1,8 @@
 // main.scss
 
+$screenTabletMax: 768px;
+$screenMobileMax: 540px;
+
 @charset 'UTF-8';
 @import 'base/reset';
 @import 'base/base';
