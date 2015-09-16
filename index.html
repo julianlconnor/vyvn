@@ -25,12 +25,11 @@
             </div>
         </div>
         <div class="navigation">
-            <a class="link" href="#about">About</a>
-            <a class="link" href="#gallery">Gallery</a>
-            <a class="link" href="#music">Music</a>
+            <a class="link" href="about">About</a>
+            <a class="link" href="gallery">Gallery</a>
+            <a class="link" href="music">Music</a>
         </div>
-        <a name="about"></a>
-        <div class="colored-section gray-4">
+        <div class="colored-section gray-4 about">
             <div class="grid">
                 <div class="content-section">
                     <h2 class="main-header before-text">What is vyvn [vahy-vin]?</h2>
@@ -39,8 +38,7 @@
                 </div>
             </div>
         </div>
-        <a name="gallery"></a>
-        <div class="colored-section gray-2">
+        <div class="colored-section gray-2 gallery">
             <div class="grid">
                 <div class="content-section">
                     <h2 class="main-header">Gallery</h2>
@@ -69,8 +67,7 @@
                 </div>
             </div>
         </div>
-        <a name="music"></a>
-        <div class="colored-section">
+        <div class="colored-section music">
             <div class="grid">
                 <div class="content-section">
                     <h2 class="main-header">Music</h2>
@@ -79,20 +76,38 @@
                 </div>
             </div>
         </div>
-        <div class="footer clear">
-            <div class="social-media right">
-                <a href="https://www.facebook.com/vyvnnyc" class="vyvn-icon-facebook social-link" target="_blank"></a>
-                <a href="http://websta.me/tag/vyvn" class="vyvn-icon-instagram social-link" target="_blank"></a>
+        <div class="grid">
+            <div class="footer clear">
+                <div class="social-media right">
+                    <a href="https://www.facebook.com/vyvnnyc" class="vyvn-icon-facebook social-link" target="_blank"></a>
+                    <a href="http://websta.me/tag/vyvn" class="vyvn-icon-instagram social-link" target="_blank"></a>
+                </div>
+                <div class="email left">hello [at] vyvn [dot] com</div>
             </div>
-            <div class="email left">hello [at] vyvn [dot] com</div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script>
             (function() {
+                /** Navigation **/
+                $('.navigation .link').on('click', function(event) {
+                    event.preventDefault();
+
+                    var $link = $(event.currentTarget);
+                    var className = $link.attr('href');
+                    var $section =$('.colored-section.' + className);
+                    var offset = $section.offset().top;
+
+                    $('html, body').animate({
+                        scrollTop: offset
+                    }, 500);
+                });
+
+
                 if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
                     return;
                 }
 
+                /** Video **/
                 var videos = [
                     {
                         src: 'videos/champagne.mp4',
@@ -105,7 +120,7 @@
                 ];
                 var videoCount = videos.length;
                 var i = 0;
-                var $video = $('<video class="splash-video"><source src="' + videos[i].src + '" type="video/mp4"></video>');
+                var $video = $('<video autoplay class="splash-video"><source src="' + videos[i].src + '" type="video/mp4"></video>');
                 var $source = $video.find('source');
                 var $overlay = $('.overlay');
                 var videoElement = $video.get(0);
@@ -116,11 +131,10 @@
                 
                 $video.on('ended', function() {
                     if (i == (videoCount - 1)) {
-                        i = 0;
-                    } else {
-                        i++;
+                        return;
                     }
 
+                    i++;
                     var video = videos[i];
                     $source.attr('src', video.src);
                     $overlay.css('opacity', video.opacity);
