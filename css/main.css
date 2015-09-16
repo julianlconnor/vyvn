@@ -76,6 +76,7 @@ a {
   src: url("../fonts/vyvn-font.eot?#iefix") format("embedded-opentype"), url("../fonts/vyvn-font.woff") format("woff"), url("../fonts/vyvn-font.ttf") format("truetype"), url("../fonts/vyvn-font.svg#vyvn-font") format("svg");
   font-weight: normal;
   font-style: normal; }
+
 [data-icon]:before {
   font-family: "vyvn-font" !important;
   content: attr(data-icon);
@@ -119,6 +120,9 @@ a {
   font-size: 20px;
   margin-bottom: 10px; }
 
+.paragraph + .paragraph {
+  margin-top: 20px; }
+
 .gallery .row {
   margin-left: -10px; }
 .gallery .col-4 {
@@ -155,7 +159,8 @@ body {
   z-index: 1; }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #000;
+  opacity: 0.5;
   position: absolute;
   top: 0;
   bottom: 0;

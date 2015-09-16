@@ -8,7 +8,7 @@
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://www.vyvn.com">
         <meta property="og:title" content="vyvn">
-        <meta property="og:description" content="Vyvn is a NYC-based Burning Man camp that started in the summer of 2013. Our NYC-based party series focuses on small, intimate events with locally-sourced music and art.">
+        <meta property="og:description" content="Vyvn is an up-and-coming Burning Man camp full of passionate artists, builders and creators. We strive to create a lively and welcoming vibe wherever we may be, whether Burning Man or the default world.">
         <meta property="og:image" content="http://www.vyvn.com/images/vyvn_fb_image.jpg">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -26,8 +26,9 @@
         </div>
         <div class="grid">
             <div class="section">
-                <h2 class="main-header before-text">What is vyvn?</h2>
-                <p>Vyvn is a NYC-based Burning Man camp that started in the summer of 2013. Our NYC-based party series focuses on small, intimate events with locally-sourced music and art.</p>
+                <h2 class="main-header before-text">What is vyvn [vahy-vin]?</h2>
+                <p class="paragraph">Vyvn is an up-and-coming Burning Man camp full of passionate artists, builders and creators. We strive to create a lively and welcoming vibe wherever we may be, whether Burning Man or the default world.</p>
+                <p class="paragraph">We celebrated our first year on the playa this year at 3:15 & G. Thank you to everyone who came out to enjoy some great music and bubbly with us. If you weren't able to make it out there, keep an eye out for our events in NYC throughout the year.</p>
             </div>
             <div class="section">
                 <h2 class="main-header">Gallery</h2>
@@ -98,9 +99,39 @@
                     return;
                 }
 
-                var $video = $('<video autoplay loop class="splash-video"><source src="videos/vyvn.mp4" type="video/mp4"></video>');
+                var videos = [
+                    {
+                        src: 'videos/champagne.mp4',
+                        opacity: 0.5
+                    },
+                    {
+                        src: 'videos/ifrit.mp4',
+                        opacity: 0.2
+                    }
+                ];
+                var videoCount = videos.length;
+                var i = 0;
+                var $video = $('<video autoplay class="splash-video"><source src="' + videos[i].src + '" type="video/mp4"></video>');
+                var $source = $video.find('source');
+                var $overlay = $('.overlay');
+                var videoElement = $video.get(0);
+
                 $('.splash').prepend($video);
-		$video.get(0).playbackRate = 0.9;
+                videoElement.volume = 0;
+                videoElement.playback = 0.9;
+                
+                $video.on('ended', function() {
+                    if (i == (videoCount - 1)) {
+                        i = 0;
+                    } else {
+                        i++;
+                    }
+
+                    var video = videos[i];
+                    $source.attr('src', video.src);
+                    $overlay.css('opacity', video.opacity);
+                    $video.load();
+                });
             })();
         </script>
     </body>
