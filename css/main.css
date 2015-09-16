@@ -76,7 +76,6 @@ a {
   src: url("../fonts/vyvn-font.eot?#iefix") format("embedded-opentype"), url("../fonts/vyvn-font.woff") format("woff"), url("../fonts/vyvn-font.ttf") format("truetype"), url("../fonts/vyvn-font.svg#vyvn-font") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 [data-icon]:before {
   font-family: "vyvn-font" !important;
   content: attr(data-icon);
@@ -128,15 +127,14 @@ a {
   margin-top: 20px; }
 
 .gallery .row {
-  margin-left: -10px; }
+  margin-left: -10px;
+  margin-right: -10px; }
 .gallery .col-4 {
-  display: inline-block;
   box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
+  display: inline-block;
+  padding: 0 10px;
+  margin: 0 -4px 16px 0;
   width: 33.33333%;
-  margin-left: -4px;
-  margin-bottom: 16px;
   vertical-align: top; }
 .gallery .gallery-image {
   width: 100%; }
@@ -243,3 +241,5 @@ body {
 .artists .ali {
   background-size: 100%;
   background-position: 0 -43px; }
+
+/*# sourceMappingURL=main.css.map */
