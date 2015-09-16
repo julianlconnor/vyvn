@@ -65,14 +65,45 @@ body {
     }
 }
 
-.section {
-    padding: 70px 50px 0;
+.navigation {
+    font-size: 26px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+
+    .link + .link {
+        margin-left: 30px;
+    }
+}
+
+.colored-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &.gray-1 {
+        background-color: lighten(#111, 1);
+    }
+
+    &.gray-2 {
+        background-color: lighten(#111, 2);
+    }
+
+    &.gray-3 {
+        background-color: lighten(#111, 3);
+    }
+
+    &.gray-4 {
+        background-color: lighten(#111, 4);
+    }
+}
+
+.content-section {
+    padding: 0 50px;
 }
 
 .footer {
-    margin-top: 80px;
     padding-bottom: 30px;
-    padding: 10px 50px 20px;
+    padding: 30px 50px 20px;
 
     .email {
         line-height: 28px;
