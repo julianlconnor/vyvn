@@ -126,6 +126,10 @@ a {
 .paragraph + .paragraph {
   margin-top: 20px; }
 
+@media screen and (max-width: 540px) {
+  .date {
+    display: block;
+    float: none; } }
 .gallery .row {
   margin-left: -10px;
   margin-right: -10px; }
