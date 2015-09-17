@@ -247,3 +247,7 @@ body {
 .artists .ali {
   background-size: 100%;
   background-position: 0 -43px; }
+
+@media screen and (max-width: 768px) {
+  .content-section {
+    padding: 0 50px; } }
