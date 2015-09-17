@@ -140,6 +140,8 @@ a {
   margin: 0 -4px 16px 0;
   width: 33.33333%;
   vertical-align: top; }
+.gallery .event {
+  margin-top: 50px; }
 .gallery .gallery-image {
   width: 100%; }
 @media screen and (max-width: 768px) {
@@ -245,5 +247,3 @@ body {
 .artists .ali {
   background-size: 100%;
   background-position: 0 -43px; }
-
-/*# sourceMappingURL=main.css.map */
