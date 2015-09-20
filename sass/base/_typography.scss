@@ -23,3 +23,12 @@
     margin-top: 20px;
 }
 
+@media screen
+and (max-width: $screenMobileMax) {
+
+    .date {
+        display: block;
+        float: none;
+    }
+}
+

@@ -151,3 +151,12 @@ body {
         background-position: 0 -43px;
     }
 }
+
+@media screen
+and (max-width: $screenTabletMax) {
+
+    .content-section {
+        padding: 0 50px;
+    }
+}
+
