@@ -1,5 +1,5 @@
 # vyvn
 
-Code for [www.vyvn.com](http://www.vyvn.com)
+Code for [vyvn.com](http://vyvn.com)
 
-Vyvn is an up-and-coming Burning Man camp full of passionate artists, builders and creators. We strive to create a lively and welcoming vibe wherever we may be, whether Burning Man or the default world.
+Vyvn is a Burning Man camp of passionate artists, builders and creators. We strive to create a lively and welcoming vibe in Black Rock City, NYC or wherever we may be.
