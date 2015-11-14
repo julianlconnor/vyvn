@@ -271,8 +271,28 @@ body {
   background-size: 100%;
   background-position: 0 -43px; }
 
+/**
+ * Specific Cases for Tablet and Mobile
+ */
 @media screen and (max-width: 768px) {
   .content-section {
     padding: 0 50px; } }
+@media screen and (max-width: 540px) {
+  .about-link {
+    display: none; }
+
+  .colored-section {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+
+  .events .event-content {
+    left: 10%;
+    margin-top: -18px; }
+  .events .event-date {
+    font-size: 18px;
+    opacity: 0.9; }
+  .events .event-title {
+    font-size: 30px;
+    line-height: 30px; } }
 
 /*# sourceMappingURL=main.css.map */

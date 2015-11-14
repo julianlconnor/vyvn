@@ -153,11 +153,45 @@ body {
     }
 }
 
+/**
+ * Specific Cases for Tablet and Mobile
+ */
 @media screen
 and (max-width: $screenTabletMax) {
 
     .content-section {
         padding: 0 50px;
+    }
+}
+
+@media screen
+and (max-width: $screenMobileMax) {
+
+    .about-link {
+        display: none;
+    }
+
+    .colored-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .events {
+
+        .event-content {
+            left: 10%;
+            margin-top: -18px;
+        }
+
+        .event-date {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .event-title {
+            font-size: 30px;
+            line-height: 30px;
+        }
     }
 }
 
