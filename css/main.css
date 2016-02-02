@@ -151,6 +151,9 @@ a {
   .gallery .col-4 {
     width: 100%; } }
 
+.events .event {
+  display: block;
+  margin-bottom: 50px; }
 .events .event-wrapper {
   background-color: #000;
   position: relative; }
