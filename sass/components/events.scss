@@ -12,12 +12,16 @@
 
     .event-image {
         display: block;
-        opacity: 0.7;
+        opacity: 0.9;
         width: 100%;
+
+        &.darker {
+            opacity: 0.6;
+        }
     }
 
     .event-title {
-        font-size: 42px;
+        font-size: 38px;
         font-weight: 600;
         letter-spacing: 1px;
         line-height: 54px;
@@ -32,8 +36,8 @@
 
     .event-content {
         position: absolute;
-        top: 50%;
-        left: 20%;
+        top: 77%;
+        left: 6%;
         margin-top: -34px;
     }
 }
