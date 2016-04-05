@@ -8,6 +8,10 @@
     .event-wrapper {
         background-color: #000;
         position: relative;
+
+        &.outlined {
+            border: 1px solid #444;
+        }
     }
 
     .event-image {
