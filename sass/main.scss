@@ -180,7 +180,6 @@ and (max-width: $screenMobileMax) {
 
         .event-content {
             left: 10%;
-            margin-top: -18px;
         }
 
         .event-date {
@@ -189,7 +188,7 @@ and (max-width: $screenMobileMax) {
         }
 
         .event-title {
-            font-size: 30px;
+            font-size: 24px;
             line-height: 30px;
         }
     }
