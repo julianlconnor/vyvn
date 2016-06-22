@@ -23,6 +23,10 @@
     margin-top: 20px;
 }
 
+.paragraph + .main-header {
+    margin-top: 60px;
+}
+
 @media screen
 and (max-width: $screenMobileMax) {
 
